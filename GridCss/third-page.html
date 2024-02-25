@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Css Grid</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        .container {
+            /* border: 2px solid green; */
+            width: 99%;
+            height: 110%;
+            display: grid;
+            grid-template-areas:
+                "head head head"
+                "side content content"
+                "foot foot foot";
+            grid-template-rows: 30px 500px 30px;
+            /* grid-template-columns: 30px 50px 30px; */
+        }
+
+        header {
+            grid-area: head;
+            /* border: 2px solid green; */
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-evenly;
+            /* margin: 10px 0; */
+            color: white;
+            background: #e63b3b;
+            padding: 2px 1px;
+            border-radius: 30px;
+        }
+
+        h4 {
+            padding: 4px 9px;
+            font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+                "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+        }
+
+        ul {
+            display: flex;
+        }
+
+        ul>li {
+            list-style-type: none;
+            padding: 4px 9px;
+        }
+
+        ul>li :hover {
+            background: white;
+            color: #23832b;
+        }
+
+        li>a {
+            text-decoration: none;
+            color: white;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-around;
+            position: sticky;
+        }
+
+        nav>ul {
+            display: flex;
+
+            /* justify-content: space-around; */
+        }
+
+        nav>ul>li {
+
+            text-decoration: none;
+            margin: 0px 10px;
+            list-style: none;
+        }
+
+        nav>ul>li a {
+            text-decoration: none;
+            color: black;
+        }
+
+        article {
+            grid-area: content;
+            /* border: 2px solid rgb(155, 76, 151); */
+        }
+
+        .art {
+            width: 70%;
+            height: 100px;
+            margin: 100px 110px;
+            padding: 17px 50px;
+        }
+
+        .a-head {
+            margin-left: 188px;
+            margin-bottom: 20;
+
+            font-family: cursive;
+            font-weight: 700;
+        }
+
+        .text {
+            font-family: sans-serif;
+            font-size: medium;
+            box-shadow: 5px 5px 5px rgb(164, 110, 110);
+
+        }
+
+
+        aside {
+            grid-area: side;
+            /* border: 2px solid rgb(51, 53, 145); */
+        }
+aside img {
+    margin: 9px;
+    width: 316px;
+    margin-left: 55px;
+    border-radius: 169px 110px;
+}
+        form {
+            margin: 150px 50px;
+        }
+
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1em;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+
+        <header>
+            <div class="navbar">
+                <div class="logo-text">
+                    <h4>Css Grid</h4>
+                </div>
+                <ul>
+                    <li><a href="first-page.html">Home</a></li>
+                    <li><a href="second-page.html">About</a></li>
+                    <li><a href="#">Service Us</a></li>
+                </ul>
+            </div>
+
+        </header>
+        <article>
+            <div class="art">
+
+                <h2 class="a-head">Service Us </h2>
+                <p class="text">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam facere expedita mollitia placeat
+                    voluptas quam eligendi itaque facilis nam pariatur culpa, eius cupiditate vel dolor. Architecto
+                    incidunt, assumenda commodi tempo non delectus soluta aspernatur sint fuga modi, iste quis at
+                    dolore, nam fugit suscipit alias vitae voluptatum maxime assumenda! Deleniti eligendi, tempore et
+                    corrupti consectetur repellat distinctio, perspiciatis beatae iure ea error est veniam sunt, rerum
+                    esse necessitatibus? Quos, saepe. Voluptatibus asperiores voluptate perspiciatis quis debitis!
+                </p>
+
+            </div>
+        </article>
+        <aside>
+            <div class="side">
+                <img src="service.webp"
+                    alt="Error">
+            </div>
+        </aside>
+        <footer>
+            <p>&copy; 2024 your CSS Grid Service Us. All rights reserved.</p>
+        </footer>
+
+    </div>
+</body>
+
+</html>
